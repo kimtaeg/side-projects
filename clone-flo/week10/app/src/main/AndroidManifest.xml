@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.week10">
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+
+    <queries>
+        <package android:name="com.kakao.talk" />
+    </queries>
+
+    <application
+        android:name=".GlobalApplication"
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:theme="@style/Theme._2week">
+
+<!--splashactivity기 앱 시작점이 되도록 해줌-->
+        <activity
+            android:name="com.example.week10.ui.splash.SplashActivity"
+            android:exported="true">
+<!--구성요소의 역할을 지정할수있다-->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.week10.ui.main.MainActivity">
+        </activity>
+        <activity android:name="com.example.week10.ui.song.SongActivity"
+             />
+        <activity android:name="com.example.week10.ui.login.LoginActivity"/>
+        <activity android:name="com.example.week10.ui.signup.SignUpActivity"/>
+        <service android:name=".service.MusicPlayer" android:enabled="true" android:exported="false" />
+        <meta-data
+            android:name="com.kakao.sdk.AppKey"
+            android:value="de89ade7de5c3826bf3050bc2c3f433d" />
+
+        <!-- KOE004 오류 해결을 위한 Redirect URI 처리 Activity -->
+        <activity
+            android:name="com.kakao.sdk.auth.AuthCodeHandlerActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="oauth"
+                    android:scheme="kakaode89ade7de5c3826bf3050bc2c3f433d" />
+            </intent-filter>
+        </activity>
+
+    </application>
+
+</manifest>

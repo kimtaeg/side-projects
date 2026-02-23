@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background">
+    <!-- 수직 가이드 라인 -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_vertical"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="205dp" />
+    <!-- 상단 가이드 라인 -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horizontal_top"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintGuide_percent="0.1"
+        android:orientation="horizontal"/>
+    <!-- 하단 가이드 라인 -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_horizontal_bottom"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintGuide_percent="0.9"
+        android:orientation="horizontal"/>
+
+
+    <ImageView
+        android:id="@+id/today"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/today"
+        app:layout_constraintStart_toStartOf="@id/guideline_vertical"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vertical"
+        app:layout_constraintTop_toTopOf="@id/guideline_horizontal_top"
+        />
+
+    <ImageView
+        android:id="@+id/feeling"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/feeling"
+        app:layout_constraintStart_toStartOf="@id/guideline_vertical"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vertical"
+        app:layout_constraintTop_toBottomOf="@id/today"
+        android:layout_marginTop="20dp" />
+
+    <ImageView
+        android:id="@+id/choice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/choice"
+        app:layout_constraintStart_toStartOf="@id/guideline_vertical"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vertical"
+        app:layout_constraintTop_toBottomOf="@id/feeling"
+        android:layout_marginTop="20dp" />
+
+
+    <ImageView
+        android:id="@+id/emotion"
+        android:layout_width="205dp"
+        android:layout_height="434dp"
+        android:layout_marginTop="76dp"
+        android:src="@drawable/group_572"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vertical"
+        app:layout_constraintHorizontal_bias="0.458"
+        app:layout_constraintStart_toStartOf="@id/guideline_vertical"
+        app:layout_constraintTop_toBottomOf="@id/choice"/>
+
+    <ImageView
+        android:id="@+id/happy"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="120dp"
+        android:src="@drawable/group_573"
+        app:layout_constraintEnd_toEndOf="@id/guideline_vertical"
+        app:layout_constraintHorizontal_bias="0.479"
+        app:layout_constraintStart_toStartOf="@id/guideline_vertical"
+        app:layout_constraintTop_toTopOf="@id/guideline_horizontal_top" />
+
+    <ImageView
+        android:id="@+id/cool"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="44dp"
+        android:src="@drawable/group_574"
+        app:layout_constraintStart_toStartOf="@id/emotion"
+        app:layout_constraintTop_toTopOf="@id/emotion" />
+
+    <ImageView
+        android:id="@+id/soso"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="148dp"
+        android:src="@drawable/group_575"
+        app:layout_constraintStart_toStartOf="@id/emotion"
+        app:layout_constraintTop_toTopOf="@id/emotion" />
+
+    <ImageView
+        android:id="@+id/nerve"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="248dp"
+        android:src="@drawable/group_576"
+        app:layout_constraintStart_toStartOf="@id/emotion"
+        app:layout_constraintTop_toTopOf="@id/emotion" />
+
+    <ImageView
+        android:id="@+id/angry"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="352dp"
+        android:src="@drawable/group_462"
+        app:layout_constraintStart_toStartOf="@id/emotion"
+        app:layout_constraintTop_toTopOf="@id/emotion" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

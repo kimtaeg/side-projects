@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Theme._2week" parent="Theme.AppCompat.Light.NoActionBar">
+    </style>
+
+    <style name="MysplashScreen" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash</item>
+<!--
+        statusbar를 투명하게 해준거
+-->
+        <item name="android:statusBarColor">@color/transparent</item>
+
+    </style>
+</resources>

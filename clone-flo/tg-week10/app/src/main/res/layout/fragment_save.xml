@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <ImageView
+        android:id="@+id/loker_check_iv"
+        android:src="@drawable/btn_playlist_select_off"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="10dp" />
+
+    <TextView
+        android:id="@+id/loker_choice_tv"
+        android:text="전체선택"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/loker_check_iv"
+        app:layout_constraintStart_toEndOf="@+id/loker_check_iv"
+        app:layout_constraintBottom_toBottomOf="@id/loker_check_iv"/>
+
+    <ImageView
+        android:id="@+id/save_arrow_iv"
+        android:src="@drawable/icon_browse_arrow_right"
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="20dp"
+        app:layout_constraintStart_toEndOf="@+id/loker_choice_tv"
+        app:layout_constraintTop_toTopOf="@id/loker_choice_tv"
+        app:layout_constraintBottom_toBottomOf="@id/loker_choice_tv"/>
+
+    <TextView
+        android:id="@+id/save_listen_tv"
+        android:text="전체듣기"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        app:layout_constraintStart_toEndOf="@+id/save_arrow_iv"
+        app:layout_constraintTop_toTopOf="@+id/save_arrow_iv"
+        app:layout_constraintBottom_toBottomOf="@id/save_arrow_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:text="편집"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintTop_toTopOf="@+id/save_listen_tv"
+        app:layout_constraintBottom_toBottomOf="@id/save_arrow_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+
+<!-- listitem-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/save_rv"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:clipToPadding="false"
+        android:paddingTop="16dp"
+        android:paddingBottom="16dp"
+        android:scrollbars="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/loker_check_iv"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

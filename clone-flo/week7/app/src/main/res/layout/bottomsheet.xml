@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/blue">
+
+    <ImageView
+        android:id="@+id/sheet_iv1"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:src="@drawable/btn_editbar_play"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <TextView
+        android:id="@+id/sheet_tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="듣기"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/sheet_iv1"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@+id/sheet_iv1"/>
+
+    <TextView
+        android:id="@+id/sheet_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="재생목록"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginStart="35dp"
+        app:layout_constraintStart_toStartOf="@id/sheet_iv2"
+        app:layout_constraintTop_toBottomOf="@id/sheet_iv2"/>
+
+    <ImageView
+        android:id="@+id/sheet_iv2"
+        android:src="@drawable/btn_editbar_addplaylist"
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toEndOf="@id/sheet_iv1"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/sheet_tv3"
+        android:text="내 리스트"
+        android:textStyle="bold"
+        android:textColor="@color/white"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        app:layout_constraintTop_toBottomOf="@+id/sheet_iv3"
+        app:layout_constraintStart_toStartOf="@id/sheet_iv3"/>
+
+    <ImageView
+        android:id="@+id/sheet_iv3"
+        android:src="@drawable/btn_editbar_mylist"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        app:layout_constraintStart_toEndOf="@id/sheet_iv2"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <TextView
+        android:id="@+id/sheet_tv4"
+        android:text="삭제"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/sheet_iv4"
+        app:layout_constraintTop_toBottomOf="@id/sheet_iv4"
+        android:paddingStart="45dp"/>
+
+    <ImageView
+        android:id="@+id/sheet_iv4"
+        android:src="@drawable/btn_editbar_delete"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/sheet_iv3"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
