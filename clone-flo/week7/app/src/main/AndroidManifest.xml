@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.week7">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme._2week">
+<!--
+        splashactivity기 앱 시작점이 되도록 해줌
+-->
+
+        <activity
+            android:name="com.example.week7.SplashActivity"
+            android:exported="true">
+<!--
+            구성요소의 역할을 지정할수있다
+-->
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.week7.MainActivity"
+            android:exported="true">
+        </activity>
+        <activity android:name="com.example.week7.SongActivity"/>
+    </application>
+
+</manifest>
